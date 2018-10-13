@@ -1,0 +1,16 @@
+<div class="content">
+	{% extends 'blog/base_blog.html' %}
+
+	{% block title %}
+		{{ post.title }} - {{ block.super }}
+	{% endblock %}
+
+	{% block content %}
+			<h2>
+				{{ post.title }}
+			</h2>
+			<div class="post">
+				{{ post.body }}
+			</div>
+	{% endblock %}
+</div>

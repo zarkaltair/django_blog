@@ -1,0 +1,18 @@
+{% extends 'blog/base_blog.html' %}
+
+
+{% block title %}
+	Tags list - {{ block.super }}
+{% endblock %}
+
+
+{% block content %}
+	<div class="tags-list">
+		<h2 class="mb-5">Tags list</h2>
+
+		{% for tag in tags %}
+			<h3><a href="{{ tag.get_absolute_url }}">{{ tag.title | upper }}</a></h3>
+		{% endfor %}
+	</div>
+
+{% endblock %}
